@@ -1,0 +1,50 @@
+{
+  "name": "spades",
+  "description": "discord.js bot template",
+  "version": "2.0.0",
+  "main": "src/app/app.js",
+  "type": "module",
+  "author": "nonsensetwice",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint",
+    "format": "eslint --fix",
+    "start": "node --trace-warnings -r dotenv/config src/app/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ephemeralrogue/spades.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "template"
+  ],
+  "bugs": {
+    "url": "https://github.com/ephemeralrogue/spades/issues"
+  },
+  "homepage": "https://github.com/ephemeralrogue/spades#readme",
+  "dependencies": {
+    "@sapphire/discord.js-utilities": "^7.3.2",
+    "@sapphire/framework": "^5.3.1",
+    "@sapphire/pieces": "^4.3.1",
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.3.1",
+    "mongodb": "^6.1.0",
+    "pino": "^9.6.0"
+  },
+  "overrides": {
+    "whatwg-url": "^14.0.0"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "eslint": "^9.13.0",
+    "globals": "^16.0.0",
+    "pino-pretty": "^13.0.0"
+  },
+  "volta": {
+    "node": "22.14.0"
+  },
+  "packageManager": "pnpm@10.6.2"
+}

@@ -1,0 +1,25 @@
+services:
+  bot:
+    container_name: spades
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+      APP_NAME: ${APP_NAME}
+
+      # Discord application
+      DISCORD_BOT_TOKEN: ${DISCORD_BOT_TOKEN}
+      DISCORD_BOT_PUBLIC_KEY: ${DISCORD_BOT_PUBLIC_KEY}
+      DISCORD_BOT_APPLICATION_ID: ${DISCORD_BOT_APPLICATION_ID}
+      DISCORD_BOT_ACTIVITY: ${DISCORD_BOT_ACTIVITY}
+
+      # MongoDB
+      MONGODB_PREFIX: ${MONGODB_PREFIX}
+      MONGODB_USERNAME: ${MONGODB_USERNAME}
+      MONGODB_PASS: ${MONGODB_PASS}
+      MONGODB_CLUSTER: ${MONGODB_CLUSTER}
+      DB_NAME: ${DB_NAME}
+
+      # Sentry
+      SENTRY_IO_DSN: ${SENTRY_IO_DSN}
