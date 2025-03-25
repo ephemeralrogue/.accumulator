@@ -1,4 +1,4 @@
-<h1 align="center">Spades</h1>
+<h1 align="center">The Accumulator</h1>
 
 <p align="center">
     <br>
@@ -10,7 +10,7 @@
     <br>
     <br>
     <i>
-        Another Discord.js Bot Template
+        The companion Discord Bot for The Design Compendium
     </i>
     <br>
 </p>

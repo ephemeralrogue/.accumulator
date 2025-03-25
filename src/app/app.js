@@ -2,8 +2,11 @@ import {
 	GatewayIntentBits,
 	Partials
 } from 'discord.js';
-import OverloadClient from './utils/OverloadClient.js';
-import Log from './utils/Log.js';
+import OverloadClient from './utils/client/OverloadClient.js';
+import '@sapphire/plugin-subcommands';
+import createChildLogger from './utils/logger/logger.js';
+
+const Log = createChildLogger('app', 'sapphireClient');
 
 const client = initializeClient();
 
@@ -14,7 +17,6 @@ function initializeClient() {
 		intents: [
 			GatewayIntentBits.Guilds,
 			GatewayIntentBits.GuildMembers,
-			GatewayIntentBits.GuildEmojisAndStickers,
 			GatewayIntentBits.GuildVoiceStates,
 			GatewayIntentBits.GuildPresences,
 			GatewayIntentBits.GuildMessages,
