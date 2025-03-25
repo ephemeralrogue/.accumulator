@@ -29,6 +29,7 @@
     "@sapphire/discord.js-utilities": "^7.3.2",
     "@sapphire/framework": "^5.3.1",
     "@sapphire/pieces": "^4.3.1",
+    "@sapphire/plugin-subcommands": "^7.0.1",
     "discord.js": "^14.16.3",
     "dotenv": "^16.3.1",
     "mongodb": "^6.1.0",
@@ -48,7 +49,8 @@
     "typescript": "^5.8.2"
   },
   "volta": {
-    "node": "22.14.0"
+    "node": "22.14.0",
+    "pnpm": "10.6.5"
   },
   "packageManager": "pnpm@10.6.2"
 }

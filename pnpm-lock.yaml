@@ -17,6 +17,9 @@ importers:
       '@sapphire/pieces':
         specifier: ^4.3.1
         version: 4.3.1
+      '@sapphire/plugin-subcommands':
+        specifier: ^7.0.1
+        version: 7.0.1
       discord.js:
         specifier: ^14.16.3
         version: 14.18.0
@@ -185,6 +188,10 @@ packages:
   '@sapphire/pieces@4.3.1':
     resolution: {integrity: sha512-t42o6i8gPQ3QISIsMl463hj057yfyHsaSrs4FssdiGLmnvL9cuLGLTsjGEPn904wHUhPzS8W5aAPr788RK2/jQ==}
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
+
+  '@sapphire/plugin-subcommands@7.0.1':
+    resolution: {integrity: sha512-3ngUpfKfcMX4zIlJ4SHLe10N79XU72H+Wdfcnd9ueMf6FOSMJFvVUfqDIp1rb7/iXi7C5dfx0pQqSwqu3UG0KQ==}
+    engines: {node: '>=v18', npm: '>=7'}
 
   '@sapphire/ratelimits@2.4.11':
     resolution: {integrity: sha512-O6FNA/P0wxU4Ve9gxL948CoZw7+sSpujyUR2CLyLLCNuNvuFGFxPCJVl5crFVLXMIyBIrc2qk+/H9bsqsyQK1Q==}
@@ -983,6 +990,10 @@ snapshots:
       '@discordjs/collection': 1.5.3
       '@sapphire/utilities': 3.18.2
       tslib: 2.8.1
+
+  '@sapphire/plugin-subcommands@7.0.1':
+    dependencies:
+      '@sapphire/utilities': 3.18.2
 
   '@sapphire/ratelimits@2.4.11': {}
 
