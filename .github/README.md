@@ -1,19 +1,17 @@
-<h1 align="center">The Accumulator</h1>
-
-<p align="center">
+<div align="center">
     <br>
     <img
-        src="./assets/lvnacy_emblem_plain.png" 
+        src="./assets/design-compendium-emblem.png" 
         alt="the lvnacy emblem, a gray circle with a large black 'V' superimposed."
-        width="120px"
+        width="256px"
     />
     <br>
-    <br>
+    <h1>.accumulator</h1>
     <i>
         The companion Discord Bot for The Design Compendium
     </i>
     <br>
-</p>
+</div>
 
 <p align="center">
     •
