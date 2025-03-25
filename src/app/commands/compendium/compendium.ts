@@ -1,12 +1,13 @@
 import { Subcommand } from '@sapphire/plugin-subcommands';
-import createChildLogger from '@/app/utils/logger/logger';
-import MongoDbUtils from '@/app/utils/database/MongoDBUtils';
+// import createChildLogger from '@/app/utils/logger/logger';
+// import MongoDbUtils from '@/app/utils/database/MongoDBUtils';
 
-const connect = MongoDbUtils.connect(`${process.env.MONGODB_DATABASE}`);
+// const connect = MongoDbUtils.connect(`${process.env.MONGODB_DATABASE}`);
 
 export default class Compendium extends Subcommand {
 	constructor(context: Subcommand.LoaderContext, options: Subcommand.Options) {
 		super(context, {
+			...options,
 			name: '.compendium',
 			description: 'a suite of commands for managing .compendium',
 			subcommands: [
@@ -50,7 +51,7 @@ export default class Compendium extends Subcommand {
 	}
 
 	public async compendiumInsert(interaction: Subcommand.ChatInputCommandInteraction) {
-		const logger = createChildLogger('compendiumInsert');
+		// const logger = createChildLogger('compendiumInsert');
 		return interaction.reply({ content: 'Hello world!' });
 	}
 }

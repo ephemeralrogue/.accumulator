@@ -1,7 +1,6 @@
 import globals from 'globals';
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
-import reactPlugin from 'eslint-plugin-react';
 import stylistic from '@stylistic/eslint-plugin';
 
 export default [
@@ -27,12 +26,11 @@ export default [
 		languageOptions: { 
 			globals: {
 				...globals.node,
-				...globals.browser,
 			},
 			ecmaVersion: 'latest',
 			parserOptions: {
 				ecmaFeatures: {
-					jsx: true,
+					jsx: false,
 				},
 				sourceType: 'module',
 			},
@@ -58,36 +56,6 @@ export default [
 			],
 			'no-console': 'error'
 		}
-	},
-	
-	// React specific configuration
-	{
-		plugins: {
-			react: reactPlugin,
-		},
-		languageOptions: {
-			parserOptions: {
-				ecmaFeatures: {
-					jsx: true,
-				},
-			},
-		},
-		settings: {
-			react: {
-				version: 'detect',
-			},
-		},
-		rules: {
-			// React specific rules
-			'react/jsx-uses-react': 'error',
-			'react/jsx-uses-vars': 'error',
-			'react/jsx-no-undef': 'error',
-			'react/jsx-key': 'error',
-			'react/no-unknown-property': 'error',
-			'react/prop-types': 'error',
-			'react/jsx-no-duplicate-props': 'error',
-			'react/react-in-jsx-scope': 'off', // Not needed for React 17+
-		},
 	},
 	
 	// TypeScript specific configuration
