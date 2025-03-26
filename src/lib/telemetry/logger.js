@@ -8,29 +8,6 @@ const options = {
 			level: 'trace'
 		}
 	},
-	browser: {
-		serialize: true,
-		write: {
-			trace: (obj) => {
-				console.trace(JSON.stringify(obj));
-			},
-			debug: (obj) => {
-				console.debug(JSON.stringify(obj));
-			},
-			info: (obj) => {
-				console.info(JSON.stringify(obj));
-			},
-			warn: (obj) => {
-				console.warn(JSON.stringify(obj));
-			},
-			error: (err, obj) => {
-				console.error(JSON.stringify(err, obj));
-			},
-			fatal: (obj) => {
-				console.error(JSON.stringify(obj));
-			}
-		}
-	},
 	formatters: {
 		level: label => {
 			return {

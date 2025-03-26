@@ -1,8 +1,6 @@
 import { Subcommand } from '@sapphire/plugin-subcommands';
-// import createChildLogger from '@/app/utils/logger/logger';
-// import MongoDbUtils from '@/app/utils/database/MongoDBUtils';
-
-// const connect = MongoDbUtils.connect(`${process.env.MONGODB_DATABASE}`);
+import createChildLogger from '../../../lib/telemetry/logger';
+import resourceCreateModal from '../../service/compendium/resourceCreateModel';
 
 export default class Compendium extends Subcommand {
 	constructor(context: Subcommand.LoaderContext, options: Subcommand.Options) {
@@ -12,8 +10,12 @@ export default class Compendium extends Subcommand {
 			description: 'a suite of commands for managing .compendium',
 			subcommands: [
 				{
-					name: 'insert',
-					chatInputRun: 'compendiumInsert',
+					name: 'create',
+					chatInputRun: 'compendiumCreate',
+				},
+				{
+					name: 'read',
+					chatInputRun: 'compendiumRead',
 				},
 				{
 					name: 'update',
@@ -34,8 +36,13 @@ export default class Compendium extends Subcommand {
 				.setDescription('a suite of commands for managing the compendium')
 				.addSubcommand(subcommand =>
 					subcommand //
-						.setName('insert')
-						.setDescription('Insert a new entry into .compendium')
+						.setName('create')
+						.setDescription('Create a new entry into .compendium')
+				)
+				.addSubcommand(subcommand =>
+					subcommand //
+						.setName('read')
+						.setDescription('Read an existing entry from .compendium')
 				)
 				.addSubcommand(subcommand =>
 					subcommand //
@@ -50,8 +57,17 @@ export default class Compendium extends Subcommand {
 		);
 	}
 
-	public async compendiumInsert(interaction: Subcommand.ChatInputCommandInteraction) {
-		// const logger = createChildLogger('compendiumInsert');
-		return interaction.reply({ content: 'Hello world!' });
+	public async compendiumCreate(interaction: Subcommand.ChatInputCommandInteraction) {
+		
+		if (interaction.user.bot) return;
+
+		const logger = createChildLogger('compendiumCreate');
+
+		try {
+			await interaction.showModal(resourceCreateModal);
+		} catch (error) {
+			logger.error(error);
+		}
+		
 	}
 }

@@ -1,16 +1,16 @@
 {
-  "name": "spades",
-  "description": "discord.js bot template",
+  "name": "accumulator",
+  "description": "Design Compendium companion bot",
   "version": "2.0.0",
   "main": "src/app/app.js",
   "type": "module",
   "author": "nonsensetwice",
   "license": "MIT",
   "scripts": {
+    "build": "tsc -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint",
-    "format": "eslint --fix",
-    "start": "node --trace-warnings -r dotenv/config src/app/app.js"
+    "lint": "npx eslint",
+    "start": "node --trace-warnings -r dotenv/config dist/app.js"
   },
   "repository": {
     "type": "git",

@@ -1,12 +1,12 @@
 {
   "projectLanguage": "ts",
   "locations": {
-    "base": "src",
-    "arguments": "app/arguments",
-    "commands": "app/commands",
-    "listeners": "app/events",
-    "preconditions": "app/preconditions",
-    "interaction-handlers": "app/interaction-handlers",
+    "base": "app",
+    "arguments": "arguments",
+    "commands": "commands",
+    "listeners": "listeners",
+    "preconditions": "preconditions",
+    "interaction-handlers": "interaction-handlers",
     "routes": ""
   },
   "customFileTemplates": {
